@@ -1,0 +1,88 @@
+mysql> show databases;
++--------------------+
+| Database           |
++--------------------+
+| employee           |
+| helloworld         |
+| information_schema |
+| mysql              |
+| performance_schema |
+| pracprison         |
+| practice           |
+| q2                 |
+| sys                |
+| university         |
+| xyz                |
++--------------------+
+11 rows in set (0.06 sec)
+
+mysql> use pracprison;
+Database changed
+mysql> select * from guard;
++----------+-----------------+------+--------+-------+
+| guard_id | guard_name      | age  | sex    | race  |
++----------+-----------------+------+--------+-------+
+|     1001 | Richard Wright  |   43 | Male   | White |
+|     1002 | Denise Cornwell |   28 | Female | White |
+|     1003 | Robert Hall     |   35 | Male   | White |
+|     1004 | Li Nguyen       |   44 | Female | Asian |
++----------+-----------------+------+--------+-------+
+4 rows in set (0.00 sec)
+
+mysql> insert into guard (guard_id, guard_name, age, sex, race)
+    -> values('1005', 'Kiara Jones', '25', 'Female', 'Black');
+Query OK, 1 row affected (0.14 sec)
+
+mysql> select * from guard;
++----------+-----------------+------+--------+-------+
+| guard_id | guard_name      | age  | sex    | race  |
++----------+-----------------+------+--------+-------+
+|     1001 | Richard Wright  |   43 | Male   | White |
+|     1002 | Denise Cornwell |   28 | Female | White |
+|     1003 | Robert Hall     |   35 | Male   | White |
+|     1004 | Li Nguyen       |   44 | Female | Asian |
+|     1005 | Kiara Jones     |   25 | Female | Black |
++----------+-----------------+------+--------+-------+
+5 rows in set (0.00 sec)
+
+mysql> insert into guard (guard_id, guard_name, age, sex, race)
+    -> values('1006', 'David Hartford', '51', 'Male', 'Black');
+Query OK, 1 row affected (0.12 sec)
+
+mysql> select * from guard;
++----------+-----------------+------+--------+-------+
+| guard_id | guard_name      | age  | sex    | race  |
++----------+-----------------+------+--------+-------+
+|     1001 | Richard Wright  |   43 | Male   | White |
+|     1002 | Denise Cornwell |   28 | Female | White |
+|     1003 | Robert Hall     |   35 | Male   | White |
+|     1004 | Li Nguyen       |   44 | Female | Asian |
+|     1005 | Kiara Jones     |   25 | Female | Black |
+|     1006 | David Hartford  |   51 | Male   | Black |
++----------+-----------------+------+--------+-------+
+6 rows in set (0.00 sec)
+
+mysql> insert into guard (guard_id, guard_name, age, sex, race)
+    -> values('1007', 'Alan Young', '67', 'Male', 'White');
+Query OK, 1 row affected (0.10 sec)
+
+mysql> insert into guard (guard_id, guard_name, age, sex, race)
+    -> values('1008', 'Sarah Wells', '55', 'Female', 'White');
+Query OK, 1 row affected (0.11 sec)
+
+mysql> select * from guard;
++----------+-----------------+------+--------+-------+
+| guard_id | guard_name      | age  | sex    | race  |
++----------+-----------------+------+--------+-------+
+|     1001 | Richard Wright  |   43 | Male   | White |
+|     1002 | Denise Cornwell |   28 | Female | White |
+|     1003 | Robert Hall     |   35 | Male   | White |
+|     1004 | Li Nguyen       |   44 | Female | Asian |
+|     1005 | Kiara Jones     |   25 | Female | Black |
+|     1006 | David Hartford  |   51 | Male   | Black |
+|     1007 | Alan Young      |   67 | Male   | White |
+|     1008 | Sarah Wells     |   55 | Female | White |
++----------+-----------------+------+--------+-------+
+8 rows in set (0.00 sec)
+
+mysql>
